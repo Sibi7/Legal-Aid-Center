@@ -1,4 +1,5 @@
 $proximaBlack: 'ProximaNovaBlack';
+$proximaRegular: 'ProximaNovaRegular';
 $proximaBold: 'ProximaNovaBold';
 $proximaLight: 'ProximaNovaLight';
 $proximaCondSemiBold: 'ProximaNovaCondensedBold';
@@ -37,7 +38,6 @@ $ralewayExtraBold: 'Raleway-ExtraBold';
 @font-face {
   font-family: 'ProximaNovaRegular';
   src: url('../fonts/ProximaNova/ProximaNova-Reg.eot') format('embedded-opentype'),
-  url('../fonts/ProximaNova/ProximaNova-Reg.woff2') format('woff2'),
   url('../fonts/ProximaNova/ProximaNova-Reg.woff') format('woff'),
   url('../fonts/ProximaNova/ProximaNova-Reg.ttf') format('truetype'),
   url('../fonts/ProximaNova/ProximaNova-Reg.svg') format('svg');
