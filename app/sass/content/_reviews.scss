@@ -1,0 +1,109 @@
+.reviews{
+  display: block;
+  position: relative;
+  float: left;
+  width: 100%;
+  background-color: #eaf2f8;
+  h2{
+    display: block;
+    position: relative;
+    float: left;
+    width: 100%;
+    margin-top: 75px;
+    margin-bottom: 45px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #262626;
+    font-family: $ralewayBold;
+    font-size: 30px;
+  }
+  &__slider{
+    display: block;
+    position: relative;
+    float: left;
+    width: 797px;
+    height: 290px;
+    margin-left: calc(50% - (770px/2));
+    margin-bottom: 149px;
+    &--item{
+      display: block;
+      position: relative;
+      float: left;
+      width: calc(100% - (24px*2));
+      margin-left: 26px;
+      height: 100%;
+     /* box-shadow: 0 20px 60px rgba(0, 0, 0, 0.25);*/
+      background-color: #1d3750;
+      > span{
+        display: block;
+        position: absolute;
+        width: 50px;
+        height: 50px;
+        top: 7px;
+        left: -25px;
+        /*background-color: rgba(14,35,64,0.9);*/
+        background-image: url('../img/icon/quotes-icon.png');
+        background-repeat: no-repeat;
+      }
+      > p{
+        display: block;
+        display: -webkit-box;
+        position: relative;
+        float: left;
+        width: 100%;
+        height: calc(18px * 1.3 * 4);
+        padding-left: 99px;
+        padding-right: 99px;
+        @include box-sizing(border-box);
+        margin-top: 45px;
+        margin-bottom: 35px;
+        text-align: center;
+        font-family: $GeorgiaItalic;
+        color: #ffffff;
+        font-size: 18px;
+        font-style: italic;
+        line-height: 1.3;
+        -webkit-line-clamp: 4;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+      > a{
+        display: block;
+        position: relative;
+        float: right;
+        margin-right: 81px;
+        color: #0b80c9;
+        font-family: $proximaRegular;
+        font-size: 16px;
+        line-height: 26px;
+        text-decoration: underline;
+      }
+    }
+    &--author{
+      display: block;
+      position: relative;
+      float: left;
+      margin-left: 79px;
+      > p{
+        display: block;
+        position: relative;
+        float: left;
+        width: 100%;
+        margin-top: 0;
+        margin-bottom: 0;
+        font-family: $proximaRegular;
+        &:first-of-type{
+          color: #ffffff;
+          font-size: 16px;
+          line-height: 26px;
+        }
+        &:last-of-type{
+          color: #848484;
+          font-size: 14px;
+          line-height: 26px;
+        }
+      }
+    }
+  }
+}
