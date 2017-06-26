@@ -50,5 +50,12 @@ $(document).ready(function () {
         google.maps.event.addDomListener(window, 'load', initialize);
     }
     /*close footer map*/
-    
+
+//   input mask
+
+    jQuery(function($){
+        $("#phone").mask("+7 (999) 999-9999");
+    });
+
+//   end mask
 });
