@@ -113,7 +113,7 @@
       padding-top: 72px;
       padding-bottom: 36px;
       textarea {
-        margin-left: 228px;
+        margin-left: 180px;
         width: 425px;
         height: 180px;
         float: left;
@@ -131,19 +131,17 @@
         display: block;
         position: relative;
         float: left;
-        &__icon{
-          display: block;
-          position: absolute;
-          color: #fff;
-        }
         input {
           width: 280px;
+          padding-left: 50px;
           height: 50px;
           border: 1px solid #ffffff;
           background-color: rgba(255, 255, 255, 0.2);
           display: block;
           margin-bottom: 23px;
           margin-left: 15px;
+          position: relative;
+          box-sizing: border-box;
         }
         button {
           width: 280px;
@@ -158,6 +156,31 @@
           text-transform: uppercase;
           cursor: pointer;
         }
+      }
+      &__icon-phone{
+        display: block;
+        position: absolute;
+        color: #fff;
+        height: 24px;
+        width: 24px;
+        left: 30px;
+        top: 90px;
+      }
+      &__icon{
+        display: block;
+        position: absolute;
+        color: #fff;
+        height: 24px;
+        width: 24px;
+        left: 30px;
+        top: 13px;
+
+        img{
+          width: 100%;
+          object-fit: cover;
+          vertical-align: middle;
+        }
+
       }
       &__woman-absolute {
         position: absolute;
