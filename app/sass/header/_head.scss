@@ -142,6 +142,10 @@
           margin-left: 15px;
           position: relative;
           box-sizing: border-box;
+          &::placeholder{
+            color: #fff;
+            opacity: 1;
+          }
         }
         button {
           width: 280px;
