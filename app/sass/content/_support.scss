@@ -1,25 +1,61 @@
 .support{
+  h2 {
+    font-family: $proximaBlack;
+  }
   display: block;
   position: relative;
   float: left;
+  width: 100%;
+  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.1);
+  .container {
+  }
   &__title{
     text-align: center;
+    padding-top: 10px;
   }
   &__blocks{
     height: 100px;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px 0;
+    @include breakpoint(max-width 770px) {
+      width: 100%;
+    }
   }
-  &__block{
+  &__block {
     display: inline-block;
-    width: 33.3%;
+    width: 31.3%;
+    height: 80px;
     float: left;
+    padding: 0 1%;
+    &:nth-of-type(3) {
+      @include breakpoint(max-width 770px){
+        position: relative;
+        left: 25%;
+      }
+      @include breakpoint(max-width 500px){
+        left: 0;
+      }
+  }
+    @include breakpoint(max-width 770px) {
+      width: 50%;
+      padding: 20px 0;
+    }
+    @include breakpoint(max-width 500px) {
+      width: 100%;
+      padding: 10px 0;
+    }
     img{
-      width: 30%;
+      width: 80px;
+      height: 75px;
       float: left;
     }
     p{
+      font-family:$proximaLight;
       padding: 1%;
-      width: 68%;
+      margin: 0;
       float: left;
+      width: 60%;
     }
   }
 }
