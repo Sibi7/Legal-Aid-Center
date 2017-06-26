@@ -53,31 +53,19 @@ gulp.task('sass', function () { // Создаем таск Sass
         fixes,
         autoprefixer(['last 5 versions', '> 5%', 'ie 8', 'ie 7', 'ie 9', 'safari 5', 'opera 12.1', 'ios 6', 'android 4'], {
             cascade: true
-<<<<<<< HEAD
         }),
-=======
-        }),       
->>>>>>> ee23ec0f6f1e9fbe599312630114b2ee8290b95f
         sorting(),
         stylefmt,
         cssnano
     ];
     return gulp.src('app/sass/**/*.scss')
-<<<<<<< HEAD
         .pipe(plumber())
-=======
-        .pipe(plumber())        
->>>>>>> ee23ec0f6f1e9fbe599312630114b2ee8290b95f
         .pipe(sass().on('error', sass.logError))
         .pipe(postcss(processors))
         .pipe(rename({
             suffix: ".min",
             extname: ".css"
-<<<<<<< HEAD
         }))
-=======
-        }))        
->>>>>>> ee23ec0f6f1e9fbe599312630114b2ee8290b95f
         .pipe(plumber.stop())
         .pipe(gulp.dest('css'))
         .pipe(browserSync.reload({
@@ -85,22 +73,10 @@ gulp.task('sass', function () { // Создаем таск Sass
         }));
 });
 
-<<<<<<< HEAD
 gulp.task('browser-sync', function() { // Создаем таск browser-sync
     browserSync({ // Выполняем browserSync
         server: { // Определяем параметры сервера
             baseDir: '' // Директория для сервера - app
-=======
-gulp.task('browser-sync', function () { // Создаем таск browser-sync
-    browserSync({ // Выполняем browserSync
-        proxy: {
-            target: '' // Директория для сервера - app
-        },
-        ghostMode: {
-            clicks: true,
-            forms: true,
-            scroll: true
->>>>>>> ee23ec0f6f1e9fbe599312630114b2ee8290b95f
         },
         notify: false // Отключаем уведомления
     });
@@ -136,11 +112,7 @@ gulp.task('extend-blocks', function () {
         .pipe(gulp.dest('./'))
 });
 
-<<<<<<< HEAD
 gulp.task('watch', ['browser-sync', 'compress', 'extend-pages', 'css-libs', 'img', 'sass'], function () {
-=======
-gulp.task('watch', ['compress', 'extend-pages', 'css-libs', 'img', 'sass'], function () {
->>>>>>> ee23ec0f6f1e9fbe599312630114b2ee8290b95f
     gulp.watch('app/libs/**/*', ['css-libs']); // Наблюдение за папкой libs
     gulp.watch('app/img/**/*', ['img']);// Наблюдение за папкой img
     gulp.watch('app/sass/**/*.scss', ['sass']); // Наблюдение за sass файлами в папке sass
