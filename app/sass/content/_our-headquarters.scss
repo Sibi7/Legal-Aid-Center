@@ -3,13 +3,31 @@
   position: relative;
   float: left;
   width: 100%;
-  background: url("../img/headqurters-bg.png") no-repeat center center;
-  background-size: cover;
-  min-height: 600px;
+  background: url("../img/headqurters-bg.png") no-repeat left center #f9f9f9;
+  background-size: contain;
+  padding-bottom: 35px;
+  &:after{
+    content: '';
+    position: absolute;
+    background: url("../img/headquarters-top.png") no-repeat;
+    background-size: cover;
+    top: -34px;
+    width: 100%;
+    height: 35px;
+  }
+  &:before{
+    content: '';
+    position: absolute;
+    background: url("../img/headquarters-bottom.png") no-repeat;
+    background-size: cover;
+    bottom: -34px;
+    width: 100%;
+    height: 35px;
+  }
   h2{
     text-align: center;
     text-transform: uppercase;
-    margin-top: 85px;
+    margin-top: 50px;
     margin-bottom: 30px;
     font-family: $proximaBold;
     span{
