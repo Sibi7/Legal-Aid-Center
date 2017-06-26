@@ -1,0 +1,22 @@
+h2 {
+  font-family: $proximaBold;
+  font-size: 26px;
+  text-transform: uppercase;
+  color: #404040;
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 30px;
+  span {
+    color: #d59653;
+  }
+}
+
+.clearfix {
+  clear: both;
+  width: 100%;
+  height: 30px;
+  float: left;
+  @include breakpoint(max-width 736px){
+    display: none;
+  }
+}
