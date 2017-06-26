@@ -1,6 +1,16 @@
 .support{
-  h2 {
-    font-family: $proximaBlack;
+  h2{
+    display: block;
+    position: relative;
+    float: left;
+    width: 100%;
+    margin-top: 27px;
+    margin-bottom: 45px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #262626;
+    font-family: $ralewayBold;
+    font-size: 30px;
   }
   display: block;
   position: relative;

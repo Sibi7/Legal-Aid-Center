@@ -1,5 +1,48 @@
 $(document).ready(function () {
 
+    /*reviews slider*/
+    if($('#reviews-slider').length > 0){       
+
+        $('#reviews-slider').owlCarousel({
+            loop: true,
+            margin: 0,
+            nav: true,
+            navText: true,
+            navigation: true,
+            /*navigationText: true,*/
+            pagination: true,
+            autoplay: true,
+            autoplayTimeout: 9000,
+            items: 1,
+            dots: true,
+            singleItem: false,
+            mouseDrag: false,
+            touchDrag: false,
+            responsiveClass: true,
+            responsive: {
+                0: {
+                    items: 1,
+                    nav: true
+                },
+                600: {
+                    items: 1,
+                    nav: true
+                },
+                1000: {
+                    items: 1,
+                    nav: true,
+                    loop: true
+                },
+                1200: {
+                    items: 1,
+                    nav: true,
+                    loop: true
+                }
+            }
+        });
+    }
+    /*close reviews slider*/
+
     /*footer map*/
     if($('#find-us-map').length > 0){
 
