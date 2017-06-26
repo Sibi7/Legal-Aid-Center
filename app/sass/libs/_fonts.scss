@@ -5,6 +5,7 @@ $proximaLight: 'ProximaNovaLight';
 $proximaCondSemiBold: 'ProximaNovaCondensedBold';
 $ralewayBold: 'Raleway-Bold';
 $ralewayExtraBold: 'Raleway-ExtraBold';
+$GeorgiaItalic: 'Georgia Italic';
 
 @font-face {
   font-family: 'Raleway-Bold';
@@ -71,5 +72,15 @@ $ralewayExtraBold: 'Raleway-ExtraBold';
   url('../fonts/ProximaNova/ProximaNovaLight.woff') format('woff'),
   url('../fonts/ProximaNova/ProximaNovaLight.ttf') format('truetype'),
   url('../fonts/ProximaNova/ProximaNovaLight.svg') format('svg');
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'Georgia Italic';
+  src: url('../fonts/Georgia/GeorgiaItalic.eot') format('embedded-opentype'),
+  url('../fonts/Georgia/GeorgiaItalic.woff2') format('woff2'),
+  url('../fonts/Georgia/GeorgiaItalic.woff') format('woff'),
+  url('../fonts/Georgia/GeorgiaItalic.ttf') format('truetype'),
+  url('../fonts/Georgia/GeorgiaItalic.svg') format('svg');
   font-weight: normal;
 }
