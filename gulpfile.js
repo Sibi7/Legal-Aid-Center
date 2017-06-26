@@ -53,31 +53,19 @@ gulp.task('sass', function () { // Создаем таск Sass
         fixes,
         autoprefixer(['last 5 versions', '> 5%', 'ie 8', 'ie 7', 'ie 9', 'safari 5', 'opera 12.1', 'ios 6', 'android 4'], {
             cascade: true
-<<<<<<< HEAD
-        }),
-=======
-        }),       
->>>>>>> ee23ec0f6f1e9fbe599312630114b2ee8290b95f
+        }),        
         sorting(),
         stylefmt,
         cssnano
     ];
     return gulp.src('app/sass/**/*.scss')
-<<<<<<< HEAD
-        .pipe(plumber())
-=======
         .pipe(plumber())        
->>>>>>> ee23ec0f6f1e9fbe599312630114b2ee8290b95f
         .pipe(sass().on('error', sass.logError))
         .pipe(postcss(processors))
         .pipe(rename({
             suffix: ".min",
             extname: ".css"
-<<<<<<< HEAD
-        }))
-=======
         }))        
->>>>>>> ee23ec0f6f1e9fbe599312630114b2ee8290b95f
         .pipe(plumber.stop())
         .pipe(gulp.dest('css'))
         .pipe(browserSync.reload({
@@ -85,12 +73,6 @@ gulp.task('sass', function () { // Создаем таск Sass
         }));
 });
 
-<<<<<<< HEAD
-gulp.task('browser-sync', function() { // Создаем таск browser-sync
-    browserSync({ // Выполняем browserSync
-        server: { // Определяем параметры сервера
-            baseDir: '' // Директория для сервера - app
-=======
 gulp.task('browser-sync', function () { // Создаем таск browser-sync
     browserSync({ // Выполняем browserSync
         proxy: {
@@ -100,7 +82,6 @@ gulp.task('browser-sync', function () { // Создаем таск browser-sync
             clicks: true,
             forms: true,
             scroll: true
->>>>>>> ee23ec0f6f1e9fbe599312630114b2ee8290b95f
         },
         notify: false // Отключаем уведомления
     });
@@ -136,11 +117,7 @@ gulp.task('extend-blocks', function () {
         .pipe(gulp.dest('./'))
 });
 
-<<<<<<< HEAD
-gulp.task('watch', ['browser-sync', 'compress', 'extend-pages', 'css-libs', 'img', 'sass'], function () {
-=======
 gulp.task('watch', ['compress', 'extend-pages', 'css-libs', 'img', 'sass'], function () {
->>>>>>> ee23ec0f6f1e9fbe599312630114b2ee8290b95f
     gulp.watch('app/libs/**/*', ['css-libs']); // Наблюдение за папкой libs
     gulp.watch('app/img/**/*', ['img']);// Наблюдение за папкой img
     gulp.watch('app/sass/**/*.scss', ['sass']); // Наблюдение за sass файлами в папке sass
@@ -172,4 +149,4 @@ gulp.task('clear', function (callback) {
 gulp.task('default', ['watch']);
 
 /*
- npm i gulp gulp-sass browser-sync gulp-concat gulp-uglifyjs gulp-rename del gulp-imagemin imagemin-pngquant gulp.spritesmith gulp-svgstore gulp-svgmin gulp-cache gulp-html-extend gulp-sourcemaps rimraf gulp-plumber gulp-postcss autoprefixer cssnano postcss-pxtorem postcss-px-to-em postcss-short stylefmt postcss-assets postcss-short-spacing postcss-focus postcss-sorting postcss-font-magician postcss-fixes stylelint-config-standard --save-dev*/
+npm i gulp gulp-sass browser-sync gulp-concat gulp-uglifyjs gulp-rename del gulp-imagemin imagemin-pngquant gulp.spritesmith gulp-svgstore gulp-svgmin gulp-cache gulp-html-extend gulp-sourcemaps rimraf gulp-plumber gulp-postcss autoprefixer cssnano postcss-pxtorem postcss-px-to-em postcss-short stylefmt postcss-assets postcss-short-spacing postcss-focus postcss-sorting postcss-font-magician postcss-fixes stylelint-config-standard --save-dev*/
