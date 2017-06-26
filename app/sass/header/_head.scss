@@ -92,7 +92,80 @@
     width: 100%;
     background: url("../img/header-bg.jpg") no-repeat;
     background-size: cover;
-    min-height: 500px;
-  }
+    &__text {
+      display: block;
+      position: relative;
+      float: left;
+      width: 574px;
+      margin-left: 219px;
+      p {
+        color: #1d3750;
+        font-family: $ralewayBold;
+        font-size: 40px;
+        line-height: 51px;
+      }
+    }
+    &__form {
+      display: block;
+      position: relative;
+      float: left;
+      width: 100%;
+      padding-top: 72px;
+      padding-bottom: 36px;
+      textarea {
+        margin-left: 228px;
+        width: 425px;
+        height: 180px;
+        float: left;
+        max-height: 180px;
+        max-width: 425px;
+        background: transparent;
+        border: 1px solid rgba(255, 255, 255, 0.7);
+        color: #fff;
+        padding: 11px;
+        &::placeholder {
+          opacity: 1;
+        }
+      }
+      form {
+        display: block;
+        position: relative;
+        float: left;
+        &__icon{
+          display: block;
+          position: absolute;
+          color: #fff;
+        }
+        input {
+          width: 280px;
+          height: 50px;
+          border: 1px solid #ffffff;
+          background-color: rgba(255, 255, 255, 0.2);
+          display: block;
+          margin-bottom: 23px;
+          margin-left: 15px;
+        }
+        button {
+          width: 280px;
+          height: 50px;
+          margin-left: 15px;
+          background-color: #ef1e37;
+          color: #fff;
+          border: none;
+          font-family: $proximaRegular;
+          font-size: 16px;
+          line-height: 24px;
+          text-transform: uppercase;
+          cursor: pointer;
+        }
+      }
+      &__woman-absolute {
+        position: absolute;
+        float: right;
+        right: 167px;
+        bottom: -5px;
+      }
+    }
 
+  }
 }
