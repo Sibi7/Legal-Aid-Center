@@ -28,7 +28,7 @@
     @include align-items(center);
     margin: 20px auto;
     width: 900px;
-    @include breakpoint(max-width 901px) {
+    @include breakpoint(max-width 995px) {
       width: 100%;
     }
   }
@@ -37,7 +37,7 @@
     @include flex-direction(row);
     @include flex-wrap(nowrap);
     width: 30%;
-    @include breakpoint(max-width 901px) {
+    @include breakpoint(max-width 995px) {
       width: 50%;
       &:last-of-type {
         width: 100%;

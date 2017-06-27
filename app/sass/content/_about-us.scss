@@ -2,6 +2,11 @@
   width: 100%;
   position: relative;
   float: left;
+  .first-header{ //первый заголовок сьехал вниз
+    @include breakpoint(max-width 712px) {
+      margin-top: 0px !important;
+    }
+  }
   h3 {
     font-family:$ralewayBold;
     line-height: 23px;
@@ -16,15 +21,19 @@
   }
   ul {
     width: 900px;
-
     box-sizing: border-box;
     margin: 80px auto 0 auto;
-    padding: 0 0 50px 0;
     &:after {
       content: "";
       display: block;
       clear: both;
       visibility: hidden;
+    }
+    @include breakpoint(max-width 995px) {
+      width: 95%;
+      box-shadow: 0 20px 30px rgba(0,0,0,.1);
+      margin: 0 auto;
+      padding: 20px;
     }
     li {
       position: relative;
@@ -34,11 +43,35 @@
       height: 250px;
       margin: 20px 1% 0 1%;
       box-sizing: border-box;
+      @include breakpoint(max-width 995px) {
+        width: 48%;
+        margin: 5px 5px 30px 5px;
+        height: 200px;
+        &:nth-of-type(odd) {
+          border-right: 1px dotted #000;
+          padding-right: 10px;
+        }
+      }
+      @include breakpoint(max-width 600px) {
+        width: 100%;
+        border-bottom: 1px dotted #000;
+        &:nth-of-type(odd) {
+          border-right: none;
+        }
+      }
       .block{
         height: 100px;
         width: 100px;
         border: 15px solid #d59653;
         position: relative;
+        @include breakpoint(max-width 995px) {
+          border:none;
+          position: absolute;
+          height: 40px;
+          width: 40px;
+          left: -5px;
+          padding-left: 25px;
+        }
         img {
           position: absolute;
           top: 50%;
@@ -56,7 +89,21 @@
         right: 0;
         background-color: #ffffff;
         padding: 0 10px 10px 10px;
-        margin: 10px;
+        @include breakpoint(max-width 995px) {
+          position: relative;
+          top: 0;
+          left: 0;
+          margin: 0;
+          background-color: transparent;
+          width: 100%;
+          h3 {
+            margin-left: 50px;
+            margin-top: 10px;
+          }
+          p {
+            position: absolute;
+          }
+        }
       }
     }
   }
