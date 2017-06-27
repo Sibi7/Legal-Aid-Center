@@ -10,7 +10,8 @@ h2 {
     color: #d59653;
   }
 }
-h3{
+
+h3 {
   text-align: center;
   color: #474747;
   font-family: $proximaRegularIt;
@@ -23,7 +24,7 @@ h3{
   width: 100%;
   height: 30px;
   float: left;
-  @include breakpoint(max-width 736px){
+  @include breakpoint(max-width 736px) {
     display: none;
   }
 }
