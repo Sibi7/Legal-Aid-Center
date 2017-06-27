@@ -1,0 +1,35 @@
+.consultations {
+  display: block;
+  position: relative;
+  float: left;
+  width: 100%;
+  &__wrapper {
+    display: block;
+    position: relative;
+    width: 1000px;
+
+    //border-bottom: 3px solid #e8c5a1;
+      &__profile {
+      display: inline-block;
+      position: relative;
+      margin-left: 90px;
+      float: left;
+    }
+    &__description{
+      display: inline-block;
+      position: relative;
+      float: left;
+      ul{
+        li{
+          color: #15a2fc;
+          font-family: $proximaRegular;
+          font-size: 14px;
+          font-weight: 400;
+          span{
+            color: #474747;
+          }
+        }
+      }
+    }
+  }
+}
