@@ -21,8 +21,11 @@
         img{
           height: 60px;
         }
-        p{
+        .active{
           color: #d59653;
+        }
+        p{
+          color: #000;
           font-family: $proximaCondSemiBold;
           font-size: 14px;
           line-height: 24px;
