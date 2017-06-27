@@ -34,10 +34,17 @@
       height: 250px;
       margin: 20px 1% 0 1%;
       box-sizing: border-box;
-      img {
-        position: absolute;
-        left:-25px;
-        top: -15px;
+      .block{
+        height: 100px;
+        width: 100px;
+        border: 15px solid #d59653;
+        position: relative;
+        img {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+        }
       }
       .text{
         position: absolute;
@@ -47,6 +54,9 @@
         height: 170px;
         bottom: 0;
         right: 0;
+        background-color: #ffffff;
+        padding: 0 10px 10px 10px;
+        margin: 10px;
       }
     }
   }
