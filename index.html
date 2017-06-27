@@ -17,26 +17,44 @@
 
 <!-- start header.html-->
 <header class="header">
+
+    <div class="header__mobile">
+        <div class="container">
+            <a href="#">
+                <i class="fa fa-bars" aria-hidden="true"></i>
+            </a>
+            <span>8 (495) 120-20-95</span>
+            <a class="ipad-button" href="#">Заказать обратный звонок</a>
+        </div>
+    </div>
     <div class="header__navigation">
         <div class="container">
+
             <div class="header__navigation__logo">
                 <a href="#">
                     <img src="img/head-logo.png" alt="">
                 </a>
                 <span>цент юридической помощи</span>
                 <button>Услуги гражданам</button>
-                <a href="#">
+                <a href="#" class="mobile-none">
                     <span class="header__navigation__logo-business-services">Услуги бизнесу</span>
                 </a>
             </div>
             <div class="header__navigation__phone">
                 <span><img src="img/icon/phone.png" alt="">8 (495) 120-20-95 </span>
                 <a href="#">Заказать обратный звонок</a>
+
             </div>
         </div>
     </div>
     <div class="header__content">
         <div class="container">
+            <div class="header__navigation__logo">
+                <a href="#">
+                    <img src="img/head-logo.png" alt="">
+                </a>
+                <span>цент юридической помощи</span>
+            </div>
             <div class="header__content__text">
                 <p>
                     Бесплатная консультация
@@ -54,7 +72,9 @@
                         type="text" placeholder="Ваше имя">
                     <span class="header__content__form__icon-phone"> <img src="img/icon/phone2.png" alt=""></span>
                     <input type="tel" placeholder="+7 (___) ___-__-__">
-                    <button>Отправить <i class="fa fa-angle-right" aria-hidden="true"></i></button>
+                    <button class="mobile-button">получить консультацию</button>
+                    <button class="desktop-button">Отправить <i class="fa fa-angle-right" aria-hidden="true"></i></button>
+
                 </form>
                 <div class="header__content__form__woman-absolute">
                     <img src="img/woman.png" alt="">

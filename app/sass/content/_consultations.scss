@@ -8,7 +8,6 @@
     position: relative;
     width: 1000px;
     margin: 0 auto;
-    //border-bottom: 3px solid #e8c5a1;
     &__profile {
       display: inline-block;
       position: relative;
@@ -61,7 +60,7 @@
         object-fit: cover;
       }
       .quote{
-        font-family: $panton;
+        font-family: $pantonRegular;
         font-size: 12px;
       }
     }

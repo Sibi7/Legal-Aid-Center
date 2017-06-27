@@ -3,6 +3,53 @@
   position: relative;
   float: left;
   width: 100%;
+  &__mobile {
+    display: none;
+    position: relative;
+    float: left;
+    width: 100%;
+    height: 56px;
+    z-index: 2;
+    background: #28487c;
+    @include breakpoint(max-width 640px) {
+      display: block;
+    }
+    @include breakpoint(max-width 1024px) {
+      display: block;
+    }
+    a {
+      display: inline-block;
+      color: #fff;
+      font-size: 34px;
+      line-height: 53px;
+    }
+    .ipad-button {
+      display: none;
+      font-size: 16px;
+      color: #c58663;
+      line-height: inherit;
+      margin-top: 15px;
+      float: right;
+      text-align: center;
+      border-bottom: 1px dashed #c58663;
+
+      @include breakpoint(max-width 1024px) {
+        display: block;
+      }
+      @include breakpoint(max-width 640px) {
+        display: none;
+      }
+    }
+    span {
+      display: inline-block;
+      color: #fff;
+      margin-left: 20px;
+      font-family: $proximaBold;
+      font-size: 28px;
+      line-height: 30px;
+      text-transform: uppercase;
+    }
+  }
   &__navigation {
     width: 100%;
     height: 94px;
@@ -12,22 +59,66 @@
     box-shadow: 0 1px 0 rgba(61, 88, 132, 0.34);
     background-color: #ffffff;
     z-index: 1;
+    @include breakpoint(max-width 1024px) {
+      display: none;
+    }
+    @include breakpoint(max-width 640px) {
+      display: block;
+    }
     &__logo {
       display: block;
       position: relative;
       float: left;
       margin-left: 112px;
-      img {
-        width: 74px;
-        margin-top: 7px;
-        object-fit: cover;
-        float: left;
+      @include  breakpoint(max-width 1266px){
+        margin-left: 0;
+      }
+      @include breakpoint(max-width 640px) {
+        float: none;
+        width: 300px;
+        margin: 0 auto;
+      }
+      a {
+        @include breakpoint(max-width 1024px) {
+          line-height: inherit;
+          display: inline-block;
+          float: left;
+        }
+        @include breakpoint(max-width 640px) {
+          line-height: inherit;
+          display: inline-block;
+          float: none;
+        }
+        img {
+          width: 74px;
+          margin-top: 7px;
+          object-fit: cover;
+          float: left;
+          @include breakpoint(max-width 640px) {
+            display: block;
+            float: none;
+          }
+          @include breakpoint(max-width 1024px) {
+            display: block;
+          }
+        }
       }
       span {
         line-height: 89px;
         font-size: 16px;
         text-transform: uppercase;
         margin-left: 16px;
+        @include breakpoint(max-width 640px) {
+          line-height: inherit;
+          display: inline-block;
+          width: 179px;
+          margin-top: 7px;
+          margin-left: 20px;
+          font-size: 24px;
+        }
+      }
+      a {
+
       }
       button {
         width: 240px;
@@ -45,6 +136,19 @@
           background: #062a65;
           transition: 200ms ease;
         }
+        @include  breakpoint(max-width 1266px){
+          margin-left: 15px;
+          font-size: 12px;
+          width: 150px;
+        }
+        @include breakpoint(max-width 640px) {
+          display: none;
+        }
+      }
+      .mobile-none {
+        @include breakpoint(max-width 640px) {
+          display: none;
+        }
       }
       &-business-services {
         color: #28487c;
@@ -52,11 +156,24 @@
         font-family: $ralewayBold;
         text-transform: uppercase;
         margin-left: 30px !important;
+        @include  breakpoint(max-width 1266px){
+          margin-left: 15px;
+          margin-right: 15px;
+        }
       }
     }
     &__phone {
       margin-left: 100px;
       display: inline-block;
+      @include  breakpoint(max-width 1266px){
+        margin-left: 0;
+      }
+      @include  breakpoint(max-width 1265px){
+        margin-left: 100px;
+      }
+      @include  breakpoint(max-width 1200px){
+        margin-left: 0;
+      }
       img {
         width: 25px;
         object-fit: cover;
@@ -73,6 +190,12 @@
         font-family: $proximaBlack;
         font-size: 24px;
         text-transform: uppercase;
+        @include breakpoint(max-width 640px) {
+          display: none;
+        }
+        @include breakpoint(max-width 1024px) {
+          display: none;
+        }
       }
       a {
         font-size: 18px;
@@ -81,9 +204,14 @@
         text-align: center;
         border-bottom: 1px dashed #c58663;
         margin-top: 15px;
+        @include breakpoint(max-width 640px) {
+          display: none;
+        }
+        @include breakpoint(max-width 1024px) {
+          display: none;
+        }
       }
     }
-
   }
   &__content {
     display: block;
@@ -92,17 +220,61 @@
     width: 100%;
     background: url("../img/header-bg.jpg") no-repeat;
     background-size: cover;
+    @include breakpoint(max-width 640px) {
+      background: #456290;
+    }
+    .header__navigation__logo {
+      display: none;
+      @include breakpoint(max-width 1024px) {
+        display: block;
+        margin-left: 15px;
+        span{
+          font-size: 24px;
+          line-height: inherit;
+          width: 270px;
+          margin-top: 7px;
+          display: inline-block;
+        }
+      }
+      @include breakpoint(max-width 640px) {
+        display: none;
+      }
+    }
     &__text {
       display: block;
       position: relative;
       float: left;
       width: 574px;
       margin-left: 219px;
+      @include breakpoint(max-width 1024px) {
+        width: 350px;
+        float: none;
+        display: block;
+        margin-left: 15px;
+        text-align: left;
+        color: #fff;
+      }
+      @include breakpoint(max-width 640px) {
+        width: 100%;
+        margin-left: 0;
+        text-align: center;
+        color: #fff;
+      }
       p {
         color: #1d3750;
         font-family: $ralewayBold;
         font-size: 40px;
         line-height: 51px;
+        @include breakpoint(max-width 1024px) {
+          color: #1d3750;
+          font-size: 27px;
+          line-height: 40px;
+        }
+        @include breakpoint(max-width 640px) {
+          color: #fff;
+          font-size: 27px;
+          line-height: 40px;
+        }
       }
     }
     &__form {
@@ -112,6 +284,12 @@
       width: 100%;
       padding-top: 72px;
       padding-bottom: 36px;
+      @include breakpoint(max-width 1024px) {
+        padding-top: 0;
+      }
+      @include breakpoint(max-width 640px) {
+        padding-top: 0;
+      }
       textarea {
         margin-left: 180px;
         width: 425px;
@@ -123,6 +301,12 @@
         border: 1px solid rgba(255, 255, 255, 0.7);
         color: #fff;
         padding: 11px;
+        @include breakpoint(max-width 1024px) {
+          display: none;
+        }
+        @include breakpoint(max-width 640px) {
+          display: none;
+        }
         &::placeholder {
           opacity: 1;
         }
@@ -131,6 +315,11 @@
         display: block;
         position: relative;
         float: left;
+        @include breakpoint(max-width 640px) {
+          float: none;
+          width: 300px;
+          margin: 0 auto;
+        }
         input {
           width: 280px;
           padding-left: 50px;
@@ -143,12 +332,12 @@
           margin-left: 15px;
           position: relative;
           box-sizing: border-box;
-          &::placeholder{
+          &::placeholder {
             color: #fff;
             opacity: 1;
           }
         }
-        button {
+        .desktop-button {
           width: 280px;
           height: 50px;
           margin-left: 15px;
@@ -160,9 +349,36 @@
           line-height: 24px;
           text-transform: uppercase;
           cursor: pointer;
+          @include breakpoint(max-width 1024px) {
+            display: none;
+          }
+          @include breakpoint(max-width 640px) {
+            display: none;
+          }
         }
+        .mobile-button {
+          width: 280px;
+          height: 50px;
+          display: none;
+          margin-left: 15px;
+          background-color: #ef1e37;
+          color: #fff;
+          border: none;
+          font-family: $proximaRegular;
+          font-size: 16px;
+          line-height: 24px;
+          text-transform: uppercase;
+          cursor: pointer;
+          @include breakpoint(max-width 1024px) {
+            display: block;
+          }
+          @include breakpoint(max-width 640px) {
+            display: block;
+          }
+        }
+
       }
-      &__icon-phone{
+      &__icon-phone {
         display: block;
         position: absolute;
         color: #fff;
@@ -171,7 +387,7 @@
         left: 30px;
         top: 90px;
       }
-      &__icon{
+      &__icon {
         display: block;
         position: absolute;
         color: #fff;
@@ -179,19 +395,26 @@
         width: 24px;
         left: 30px;
         top: 13px;
-
-        img{
+        img {
           width: 100%;
           object-fit: cover;
           vertical-align: middle;
         }
-
       }
       &__woman-absolute {
         position: absolute;
         float: right;
         right: 167px;
         bottom: -5px;
+        @include breakpoint(max-width 1200px) {
+          display: none;
+        }
+        @include breakpoint(max-width 1024px) {
+          right: 25px;
+        }
+        @include breakpoint(max-width 640px) {
+          display: none;
+        }
       }
     }
 
