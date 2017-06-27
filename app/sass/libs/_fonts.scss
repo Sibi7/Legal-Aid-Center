@@ -7,6 +7,7 @@ $proximaCondSemiBold: 'ProximaNovaCondensedBold';
 $ralewayBold: 'Raleway-Bold';
 $ralewayExtraBold: 'Raleway-ExtraBold';
 $GeorgiaItalic: 'Georgia Italic';
+$panton: 'Panton';
 
 @font-face {
   font-family: 'Raleway-Bold';
@@ -90,5 +91,14 @@ $GeorgiaItalic: 'Georgia Italic';
   url('../fonts/Georgia/GeorgiaItalic.woff') format('woff'),
   url('../fonts/Georgia/GeorgiaItalic.ttf') format('truetype'),
   url('../fonts/Georgia/GeorgiaItalic.svg') format('svg');
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'Panton';
+  src: url('../fonts/panton/Panton-LightitalicCaps.eot') format('embedded-opentype'),
+  url('../fonts/panton/Panton-LightitalicCaps.woff') format('woff'),
+  url('../fonts/panton/Panton-LightitalicCaps.ttf') format('truetype'),
+  url('../fonts/panton/Panton-LightitalicCaps.svg') format('svg');
   font-weight: normal;
 }

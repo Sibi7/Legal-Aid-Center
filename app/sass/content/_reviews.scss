@@ -105,5 +105,109 @@
         }
       }
     }
+    .owl-nav{
+      @include display-flex(flex);
+      @include flex-wrap(wrap);
+      @include flex-direction(row);
+      @include justify-content(center);
+      @include align-items(center);
+      position: absolute;
+      bottom: -66px;
+      float: left;
+      width: calc(100% - 48px);
+      margin-left: 26px;
+      height: 70px;
+      background-color: transparent;
+      .owl-prev{
+        display: block;
+        position: relative;
+        float: left;
+        width: 61px;
+        height: 10px;
+        margin-right: 31px;
+        background-image: url('../img/icon/rev-arr-icon.png');
+        background-repeat: no-repeat;
+        -webkit-background-size: 100% 100%;
+        background-size: 100% 100%;
+        &:after{
+          display: block;
+          position: absolute;
+          content: '';
+          width: 3px;
+          height: 25px;
+          background-color: #7a7a8f;
+          top: -7px;
+          right: -32px;
+        }
+      }
+      .owl-prev:hover:before{
+        display: block;
+        position: absolute;
+        content: '';
+        width: 36px;
+        height: 36px;
+        border: 5px solid #1255a0;
+        top: -17px;
+        left: -17px;
+        &:after{
+          display: block;
+          position: absolute;
+          content: '';
+          width: 3px;
+          height: 25px;
+          background-color: #7a7a8f;
+          top: -7px;
+          right: -32px;
+        }
+      }
+      .owl-next{
+        display: block;
+        position: relative;
+        float: left;
+        width: 61px;
+        height: 10px;
+        margin-left: 31px;
+        background-image: url('../img/icon/rev-arr-icon.png');
+        background-repeat: no-repeat;
+        -webkit-background-size: 100% 100%;
+        background-size: 100% 100%;
+        transform: rotate(180deg);
+      }
+      .owl-next:hover:before{
+        display: block;
+        position: absolute;
+        content: '';
+        width: 36px;
+        height: 36px;
+        border: 5px solid #1255a0;
+        top: -17px;
+        right: 35px;
+      }
+    }
+    .owl-dots{
+      @include display-flex(flex);
+      @include flex-wrap(wrap);
+      @include flex-direction(row);
+      @include justify-content(center);
+      @include align-items(center);
+      position: relative;
+      width: calc(100% - 48px);
+      margin-left: 26px;
+      height: 60px;
+      background-color: #0e2340;
+      .owl-dot{
+        display: block;
+        position: relative;
+        float: left;
+        width: 45px;
+        height: 8px;
+        background-color: rgba(213,150,83,0.8);
+        margin-left: 5px;
+        margin-right: 5px;
+      }
+      .owl-dot.active{
+        background-color: #d59653;
+      }
+    }
   }
 }
