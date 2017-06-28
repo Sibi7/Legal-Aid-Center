@@ -101,4 +101,24 @@ $(document).ready(function () {
     });
 
 //   end mask
+
+// for class services
 });
+    $(document).on('click', '.services li', function () {
+        if(window.innerWidth < 1000) {
+
+            var showText = $(this).find('p');
+
+            if ($(this).hasClass('show')) {
+                $(this).removeClass('show');
+                showText.slideUp('fast');
+            } else {
+                $('.services li').removeClass('show');
+                $('.services p').slideUp('fast');
+                $(this).addClass('show');
+                showText.slideDown('fast');
+            }
+        }
+    });
+
+

@@ -3,11 +3,17 @@
   position: relative;
   float: left;
   width: 100%;
+
   .container {
     @include breakpoint(max-width 995px) {
       width: 100%;
       margin: 0;
       padding: 0;
+      display: flex;
+      flex-direction: row;
+    }
+    @include breakpoint(max-width 600px) {
+      display: block;
     }
   }
   .chevron-for-middle-and-mobile {
@@ -74,12 +80,18 @@
     word-spacing: 5px;
     @include breakpoint(max-width 995px) {
       display: none;
+      margin: 0 25px 0 45px;
+      font-size: 12px;
+      padding-top: 5px;
     }
   }
   span {
     display: block;
     font-family:$proximaBlack;
     margin: 15px 0 5px 0;
+    @include breakpoint(max-width 995px) {
+      font-family:$proximaRegular;
+    }
   }
   img {
     float: left;
@@ -100,6 +112,7 @@
       width: 100%;
       padding: 10px;
       box-sizing: border-box;
+      height: inherit;
     }
   }
   .private {
@@ -112,8 +125,8 @@
        display: block;
        float: left;
        width: 50%;
-       margin-top: 0;
-       height: 600px;
+       margin: 0;
+       height: 100;
      }
     @include breakpoint(max-width 600px) {
       width: 100%;
@@ -148,7 +161,7 @@
     @include breakpoint(max-width 995px) {
       margin: 0 auto;
       background-color: #274766;
-      height: 600px;
+      height: inherit;
       display: block;
       float: left;
       width: 50%;
