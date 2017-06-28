@@ -3,8 +3,27 @@
   position: relative;
   float: left;
   width: 100%;
+  .container {
+    @include breakpoint(max-width 995px) {
+      width: 100%;
+      margin: 0;
+      padding: 0;
+    }
+  }
+  .chevron-for-middle-and-mobile {
+    position: relative;
+    float: right;
+    size: 15px;
+    display: none;
+    @include breakpoint(max-width 995px) {
+      display: block;
+    }
+  }
   li {
     list-style-type: none;
+    @include breakpoint(max-width 995px) {
+      margin: 20px;
+    }
   }
   h2 {
     font-size: 26px;
@@ -15,6 +34,21 @@
     margin: 20px 0;
     padding-bottom: 10px;
     border-bottom: 3px solid #d59653;
+    @include breakpoint(max-width 995px) {
+      text-align: center;
+      border-bottom: none;
+      margin: 0px;
+      font-family: $proximaRegular;
+      font-size: 24px;
+      width: 100%;
+    }
+    @include breakpoint(max-width 793px) {
+      height: 68px;
+    }
+    @include breakpoint(max-width 600px) {
+      padding-bottom: 0;
+      padding-top: 10px;
+    }
   }
   h4 {
     display: block;
@@ -22,12 +56,25 @@
     font-family:$pantonBold;
     color: #d59653;
     margin-top: 0;
+    @include breakpoint(max-width 995px) {
+      display: inline-block;
+      margin: 0;
+      color: #fff;
+      font-family: $pantonRegular;
+      font-size: 16px;
+      font-weight: 300;
+      width: 70%;
+    }
   }
   p {
-    font-family:$pantonRegular;
+    font-family: $pantonRegular;
     line-height: 16px;
     margin-bottom: 20px;
     color: #fff;
+    word-spacing: 5px;
+    @include breakpoint(max-width 995px) {
+      display: none;
+    }
   }
   span {
     display: block;
@@ -40,10 +87,20 @@
     margin-right: 15px;
     vertical-align: middle;
     padding-bottom: 4px;
+    @include breakpoint(max-width 995px) {
+      height: 30px;
+      width: 30px;
+      object-fit: contain;
+    }
   }
   .wrap {
     width: 808px;
     margin: 0 auto;
+    @include breakpoint(max-width 995px) {
+      width: 100%;
+      padding: 10px;
+      box-sizing: border-box;
+    }
   }
   .private {
      background-color: #1d3750;
@@ -51,6 +108,17 @@
      width: 1050px;
      margin: 20px auto;
      padding-top: 5px;
+     @include breakpoint(max-width 995px) {
+       display: block;
+       float: left;
+       width: 50%;
+       margin-top: 0;
+       height: 600px;
+     }
+    @include breakpoint(max-width 600px) {
+      width: 100%;
+      margin-bottom: 0;
+    }
      .private-list {
        margin: 0 auto;
        padding: 0;
@@ -58,6 +126,17 @@
        column-count: 3;
        column-width: 238px;
        column-gap: 30px;
+       @include breakpoint(max-width 995px) {
+         overflow: hidden;
+         column-count: 1;
+         column-width: 330px;
+         width: 300px;
+         margin: 10px auto;
+       }
+       @include breakpoint(max-width 600px) {
+         margin: 0;
+         width: 100%;
+       }
      }
    }
   .legal {
@@ -66,6 +145,17 @@
     width: 1050px;
     margin: 20px auto;
     padding-top: 5px;
+    @include breakpoint(max-width 995px) {
+      margin: 0 auto;
+      background-color: #274766;
+      height: 600px;
+      display: block;
+      float: left;
+      width: 50%;
+    }
+    @include breakpoint(max-width 600px) {
+      width: 100%;
+    }
     .legal-list {
       margin: 0 auto;
       padding: 0;
@@ -73,6 +163,18 @@
       column-count: 3;
       column-width: 238px;
       column-gap: 30px;
+      @include breakpoint(max-width 995px) {
+        overflow: hidden;
+        column-count: 1;
+        column-width: 330px;
+        width: 300px;
+        margin: 10px auto;
+        box-sizing: border-box;
+      }
+      @include breakpoint(max-width 600px) {
+        margin: 0;
+        width: 100%;
+      }
     }
   }
 }
