@@ -157,15 +157,6 @@ $(document).ready(function () {
                 }
             });
         }
-        // if ($(window).width() < 1000) {
-        //     $(document).ready(function () {
-        //         $("#owl-consult").owlCarousel({
-        //             loop: true,
-        //             items: 1,
-        //             nav: true,
-        //             navText: "",
-        //         });
-        //     });
-        // }
+
     });
 
