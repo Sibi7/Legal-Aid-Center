@@ -119,6 +119,53 @@ $(document).ready(function () {
                 showText.slideDown('fast');
             }
         }
-    });
+        //end class services
 
+        // for '.consultations'
+        if ($(window).width() < 1000) {
+            $('.owl-consult').owlCarousel({
+                loop: true,
+                margin: 0,
+                nav: true,
+                navText: true,
+                navigation: true,
+                /*navigationText: true,*/
+                pagination: true,
+                items: 1,
+                dots: true,
+                touchDrag: true,
+                responsiveClass: true,
+                responsive: {
+                    0: {
+                        items: 1,
+                        nav: true
+                    },
+                    600: {
+                        items: 1,
+                        nav: true
+                    },
+                    1000: {
+                        items: 1,
+                        nav: true,
+                        loop: true
+                    },
+                    1200: {
+                        items: 1,
+                        nav: true,
+                        loop: true
+                    }
+                }
+            });
+        }
+        // if ($(window).width() < 1000) {
+        //     $(document).ready(function () {
+        //         $("#owl-consult").owlCarousel({
+        //             loop: true,
+        //             items: 1,
+        //             nav: true,
+        //             navText: "",
+        //         });
+        //     });
+        // }
+    });
 

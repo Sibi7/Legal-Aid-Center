@@ -1,4 +1,7 @@
 .resolution-of-disputes{
+  @include breakpoint(max-width 994px) {
+    display: none;
+  }
   display: block;
   position: relative;
   float: left;
