@@ -103,7 +103,7 @@ $(document).ready(function () {
 //   end mask
 
 // for class services
-});
+
     $(document).on('click', '.services li', function () {
         if(window.innerWidth < 1000) {
 
@@ -122,14 +122,14 @@ $(document).ready(function () {
         //end class services
 
         // for '.consultations'
-        if ($(window).width() < 1000) {
-            $('.owl-consult').owlCarousel({
+        /*if ($(window).width() < 1000) {
+            $('#consult-slider').owlCarousel({
                 loop: true,
                 margin: 0,
                 nav: true,
                 navText: true,
                 navigation: true,
-                /*navigationText: true,*/
+                /!*navigationText: true,*!/
                 pagination: true,
                 items: 1,
                 dots: true,
@@ -156,7 +156,56 @@ $(document).ready(function () {
                     }
                 }
             });
-        }
-
+        }*/
+        // if ($(window).width() < 1000) {
+        //     $(document).ready(function () {
+        //         $("#owl-consult").owlCarousel({
+        //             loop: true,
+        //             items: 1,
+        //             nav: true,
+        //             navText: "",
+        //         });
+        //     });
+        // }
     });
+    
+});
+
+if ($(window).width() < 1000) {
+    $(document).ready(function () {
+        $('#consult-slider').owlCarousel({
+            loop: true,
+            margin: 0,
+            nav: true,
+            navText: true,
+            navigation: true,
+            /*navigationText: true,*/
+            pagination: true,
+            items: 1,
+            dots: true,
+            touchDrag: true,
+            responsiveClass: true,
+            responsive: {
+                0: {
+                    items: 1,
+                    nav: true
+                },
+                600: {
+                    items: 1,
+                    nav: true
+                },
+                1000: {
+                    items: 1,
+                    nav: true,
+                    loop: true
+                },
+                1200: {
+                    items: 1,
+                    nav: true,
+                    loop: true
+                }
+            }
+        });
+    });
+}
 
