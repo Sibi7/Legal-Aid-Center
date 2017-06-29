@@ -128,7 +128,7 @@
        float: left;
        width: 50%;
        margin: 0;
-       height: 100%;
+       height: inherit;
      }
     @include breakpoint(max-width 600px) {
       width: 100%;
