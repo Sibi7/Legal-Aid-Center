@@ -1,4 +1,47 @@
 .find-us {
+  @include breakpoint(max-width 1000px) {
+    margin-top: 200px;
+    .container {
+      .find-us__icon,
+      h2 {
+        display: none;
+      }
+      .find-us__map {
+        margin-top: 50px;
+      }
+    }
+    .find-us__map--contacts {
+      top: -150px;
+      left: 50%;
+      transform: translate(-50%);
+      box-shadow: 0 20px 30px rgba(0,0,0,.1);
+      @include breakpoint(max-width 500px) {
+        width: 100%;
+        box-shadow: none;
+      }
+      button {
+        left: 50%;
+        transform: translate(-50%);
+        box-shadow: none;
+        margin: 30px 0;
+        color: #fff;
+      }
+      p {
+        @include breakpoint(max-width 330px) {
+          padding: 0 0 0 25%;
+        }
+      }
+      a {
+        font-size: 20px;
+        @include breakpoint(max-width 330px) {
+          padding: 0 0 0 25%;
+        }
+      }
+      span {
+        display: none;
+      }
+    }
+  }
   display: block;
   position: relative;
   float: left;
