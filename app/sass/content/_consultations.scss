@@ -102,6 +102,9 @@
       margin: 0;
     }
   }
+  @include breakpoint(max-width 450px) {
+    height: 670px;
+  }
   display: block;
   position: relative;
   float: left;
