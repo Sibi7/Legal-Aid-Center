@@ -32,7 +32,6 @@
       float: right;
       text-align: center;
       border-bottom: 1px dashed #c58663;
-
       @include breakpoint(max-width 1024px) {
         display: block;
       }
@@ -70,7 +69,7 @@
       position: relative;
       float: left;
       margin-left: 112px;
-      @include  breakpoint(max-width 1266px){
+      @include breakpoint(max-width 1266px) {
         margin-left: 0;
       }
       @include breakpoint(max-width 640px) {
@@ -136,7 +135,7 @@
           background: #062a65;
           transition: 200ms ease;
         }
-        @include  breakpoint(max-width 1266px){
+        @include breakpoint(max-width 1266px) {
           margin-left: 15px;
           font-size: 12px;
           width: 150px;
@@ -156,7 +155,7 @@
         font-family: $ralewayBold;
         text-transform: uppercase;
         margin-left: 30px !important;
-        @include  breakpoint(max-width 1266px){
+        @include breakpoint(max-width 1266px) {
           margin-left: 15px;
           margin-right: 15px;
         }
@@ -165,13 +164,13 @@
     &__phone {
       margin-left: 100px;
       display: inline-block;
-      @include  breakpoint(max-width 1266px){
+      @include breakpoint(max-width 1266px) {
         margin-left: 0;
       }
-      @include  breakpoint(max-width 1265px){
+      @include breakpoint(max-width 1265px) {
         margin-left: 100px;
       }
-      @include  breakpoint(max-width 1200px){
+      @include breakpoint(max-width 1200px) {
         margin-left: 0;
       }
       img {
@@ -228,7 +227,7 @@
       @include breakpoint(max-width 1024px) {
         display: block;
         margin-left: 15px;
-        span{
+        span {
           font-size: 24px;
           line-height: inherit;
           width: 270px;
@@ -411,6 +410,7 @@
         }
         @include breakpoint(max-width 1024px) {
           right: 25px;
+          display: block;
         }
         @include breakpoint(max-width 640px) {
           display: none;
