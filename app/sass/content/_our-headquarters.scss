@@ -1,4 +1,62 @@
+.for-m-version {
+  display: none;
+  position: relative;
+  background-color: #486390;
+  float: left;
+  color: #fff;
+  width: 100%;
+  h2 {
+    margin: 30px 10%;
+    color: #fff;
+  }
+  form {
+    position: relative;
+    width: 270px;
+    margin: 0 auto;
+  }
+  .block {
+    position: relative;
+    width: 100%;
+    padding: 10px 0;
+  }
+  input {
+    color: #fff;
+    padding: 0;
+    padding-left: 25px;
+    height: 50px;
+    background-color: #486390;
+    width: 240px;
+    &::placeholder {
+      color: #fff;
+      opacity: 1;
+    }
+    &:focus {
+      background-color: #6d82a6;
+    }
+  }
+  button {
+    display: block;
+    margin: 10px 0 35px 0;
+    padding: 20px;
+    width: 100%;
+    background-color: #ef1e37;
+    border: none;
+    color: #fff;
+  }
+  span {
+    display: block;
+    position: absolute;
+    top: 35%;
+    left: 7px;
+  }
+  @include breakpoint(max-width 996px) {
+    display: block;
+  }
+}
 .our-headquarters{
+  @include breakpoint(max-width 996px) {
+    display: none;
+  }
   display: block;
   position: relative;
   float: left;

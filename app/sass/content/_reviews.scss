@@ -1,10 +1,13 @@
-.reviews{
+.reviews {
   display: block;
   position: relative;
   float: left;
   width: 100%;
   background-color: #f4f2f0;
-  h2{
+  @include breakpoint(max-width 660px){
+    background-color: #ffffff;
+  }
+  h2 {
     display: block;
     position: relative;
     float: left;
@@ -17,24 +20,35 @@
     font-family: $ralewayBold;
     font-size: 30px;
   }
-  &__slider{
+  &__slider {
     display: block;
     position: relative;
     float: left;
     width: 797px;
     height: 290px;
-    margin-left: calc(50% - (770px/2));
+    margin-left: calc(50% - (770px / 2));
     margin-bottom: 149px;
-    &--item{
+    @include breakpoint (max-width 770px) {
+      width: 100%;
+      height: 278px;
+      margin-left: 0;
+      margin-bottom: 210px;
+    }
+    &--item {
       display: block;
       position: relative;
       float: left;
-      width: calc(100% - (24px*2));
+      width: calc(100% - (24px * 2));
       margin-left: 26px;
       height: 100%;
-     /* box-shadow: 0 20px 60px rgba(0, 0, 0, 0.25);*/
+      /* box-shadow: 0 20px 60px rgba(0, 0, 0, 0.25);*/
       background-color: #1d3750;
-      > span{
+      @include breakpoint (max-width 770px) {
+        width: 100%;
+        margin-left: 0;
+        background-color: #fff;
+      }
+      > span {
         display: block;
         position: absolute;
         width: 50px;
@@ -44,8 +58,11 @@
         /*background-color: rgba(14,35,64,0.9);*/
         background-image: url('../img/icon/quotes-icon.png');
         background-repeat: no-repeat;
+        @include breakpoint (max-width 770px) {
+          display: none;
+        }
       }
-      > p{
+      > p {
         display: block;
         display: -webkit-box;
         position: relative;
@@ -67,8 +84,12 @@
         -webkit-box-orient: vertical;
         overflow: hidden;
         text-overflow: ellipsis;
+        @include breakpoint(max-width 770px) {
+          color: #1d3750;
+          font-size: 16px;
+        }
       }
-      > a{
+      > a {
         display: block;
         position: relative;
         float: right;
@@ -78,14 +99,27 @@
         font-size: 16px;
         line-height: 26px;
         text-decoration: underline;
+        @include breakpoint(max-width 770px){
+          width: 166px;
+          float: left;
+          margin-left: calc(50% - (166px/2));
+          color: #0b80c9;
+          font-size: 20px;
+          margin-bottom: 47px;
+        }
       }
     }
-    &--author{
+    &--author {
       display: block;
       position: relative;
       float: left;
       margin-left: 79px;
-      > p{
+      @include breakpoint(max-width 770px) {
+        width: 100%;
+        text-align: center;
+        margin-left: 0;
+      }
+      > p {
         display: block;
         position: relative;
         float: left;
@@ -93,19 +127,27 @@
         margin-top: 0;
         margin-bottom: 0;
         font-family: $proximaRegular;
-        &:first-of-type{
+        &:first-of-type {
           color: #ffffff;
           font-size: 16px;
           line-height: 26px;
+          @include breakpoint(max-width 770px) {
+            color: #1d3750;
+            font-size: 16px;
+          }
         }
-        &:last-of-type{
+        &:last-of-type {
           color: #848484;
           font-size: 14px;
           line-height: 26px;
+          @include breakpoint(max-width 770px) {
+            color: #848484;
+            font-size: 14px;
+          }
         }
       }
     }
-    .owl-nav{
+    .owl-nav {
       @include display-flex(flex);
       @include flex-wrap(wrap);
       @include flex-direction(row);
@@ -118,7 +160,15 @@
       margin-left: 26px;
       height: 70px;
       background-color: transparent;
-      .owl-prev{
+      @include breakpoint(max-width 770px){
+        bottom: -173px;
+        width: 100%;
+        margin-left: 0;
+      }
+      @include breakpoint(max-width 660px){
+        bottom: -121px;
+      }
+      .owl-prev {
         display: block;
         position: relative;
         float: left;
@@ -129,7 +179,7 @@
         background-repeat: no-repeat;
         -webkit-background-size: 100% 100%;
         background-size: 100% 100%;
-        &:after{
+        &:after {
           display: block;
           position: absolute;
           content: '';
@@ -140,7 +190,7 @@
           right: -32px;
         }
       }
-      .owl-prev:hover:before{
+      .owl-prev:hover:before {
         display: block;
         position: absolute;
         content: '';
@@ -149,7 +199,7 @@
         border: 5px solid #1255a0;
         top: -17px;
         left: -17px;
-        &:after{
+        &:after {
           display: block;
           position: absolute;
           content: '';
@@ -160,7 +210,7 @@
           right: -32px;
         }
       }
-      .owl-next{
+      .owl-next {
         display: block;
         position: relative;
         float: left;
@@ -173,7 +223,7 @@
         background-size: 100% 100%;
         transform: rotate(180deg);
       }
-      .owl-next:hover:before{
+      .owl-next:hover:before {
         display: block;
         position: absolute;
         content: '';
@@ -184,7 +234,7 @@
         right: 35px;
       }
     }
-    .owl-dots{
+    .owl-dots {
       @include display-flex(flex);
       @include flex-wrap(wrap);
       @include flex-direction(row);
@@ -195,17 +245,24 @@
       margin-left: 26px;
       height: 60px;
       background-color: #0e2340;
-      .owl-dot{
+      @include breakpoint(max-width 770px){
+        width: 100%;
+        margin-left: 0;
+      }
+      @include breakpoint(max-width 660px){
+        display: none;
+      }
+      .owl-dot {
         display: block;
         position: relative;
         float: left;
         width: 45px;
         height: 8px;
-        background-color: rgba(213,150,83,0.8);
+        background-color: rgba(213, 150, 83, 0.8);
         margin-left: 5px;
         margin-right: 5px;
       }
-      .owl-dot.active{
+      .owl-dot.active {
         background-color: #d59653;
       }
     }
