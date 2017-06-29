@@ -1,10 +1,36 @@
 .footer {
+  .anchor-for-m-version {
+    display: none;
+    @include breakpoint(max-width 1100px) {
+      display: block;
+      height: 80px;
+      text-align: center;
+      > a {
+        display: inline-block;
+        color: #fff;
+        border-bottom: 1px dotted #fff;
+        margin-top: 30px;
+      }
+      @include breakpoint(max-width 500px) {
+        margin-top: 240px;
+      }
+    }
+  }
+  @include breakpoint(max-width 1100px) {
+    display: block;
+  }
+  > .container {
+    width:auto;
+  }
   display: block;
   position: relative;
   float: left;
   width: 100%;
   background-color: #28487c;
   &__nav {
+    @include breakpoint(max-width 1100px) {
+      display: none;
+    }
     @include display-flex(flex);
     @include flex-wrap(wrap);
     @include flex-direction(row);
@@ -41,6 +67,7 @@
     }
   }
   &__separator {
+
     display: block;
     position: relative;
     float: left;
@@ -49,10 +76,16 @@
     background-color: rgba(255, 255, 255, 0.3);
   }
   &__links {
+    @include breakpoint(max-width 1100px) {
+      display: none;
+    }
     display: block;
     position: relative;
     float: left;
     width: 100%;
+    > .container {
+      width:auto;
+    }
     &--agreement {
       position: relative;
       float: left;
